@@ -1,0 +1,1349 @@
+/*
+Theme Name: 
+Theme URI: 
+Author: 
+mail: 
+Version:
+*/
+
+@charset "utf-8";
+/* CSS Document */
+
+/* ------------------------------------------------- 
+
+0. ESTILOS BASE
+1. TEXTO y TIPOGRAFÍAS
+2. HEADER PAGE (NAV)
+3. MENSAJE 
+4. OUR BENEFITS CUSTOM SOFTWARE
+5. OUR PROCESS CUSTOM SOFTWARE
+6. SPECIFIC SOLUTIONS
+7. TELL US - FORM
+8. FOOTER
+
+------------------------------------------------- */
+
+/* 0. ESTILOS BASE */
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box !important;
+}
+
+:root {
+    --color1:#004F9F;
+    --color2:#08C0E1;
+    --color3:#FF5C00;
+    --color4:#FECA00;
+    --color5:#E5E5E5;
+    --font1:'Montserrat', sans-serif;
+}
+
+body, html{
+	margin: 0;
+	padding: 0;
+	overflow-x:hidden;
+    width: 100%;
+    background:white;
+    font-size: 14px;
+    font-family: var(--font1);
+}
+
+.color1{
+	color: var(--color1) !important;
+}
+
+.color2{
+	color: var(--color2) !important;
+}
+
+.color3{
+	color: var(--color3) !important;
+}
+
+
+.back1{
+	background-color: var(--color1) !important;
+}
+
+.back2{
+	background-color: var(--color2) !important;
+}
+
+.back3{
+	background-color: var(--color3) !important;
+}
+
+.back5{
+	background-color: var(--color5) !important;
+}
+
+
+section,nav,article,aside,hgroup,header,footer{
+	display:block
+}
+ul, ol, li{
+	list-style: none;
+} 
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset, img {
+	border:0;
+}
+img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.cleaner{
+	clear: both;
+	visibility:hidden;
+	font-size:0;
+	height:0;
+	display:block;
+}
+.hidden{
+    position: absolute;
+    width: 0;
+    height: 0;
+    top:-5000px;
+    left: -5000px;
+}
+.textLeft{
+	text-align:left !important;
+}
+.textRight{
+	text-align:right  !important;
+}
+.textCenter{
+	text-align:center;
+}
+
+.padding20{
+	padding: 0 20px !important;
+}
+.padding30{
+	padding: 0 30px !important;
+}
+
+.btn{
+    display:inline-flex !important;
+    flex-flow: row nowrap!important;
+    align-items: center!important;
+    justify-content: space-between!important;
+    font-family: var(--font1) !important;
+    font-weight: 600;
+    font-size: 1.4rem !important;
+    background: var(--color1) !important;
+    border:none !important;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 8px 12px;
+    color:white;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.btn > img{
+    width: 32px;
+    margin: 0 8px 0 0;
+}
+.btn:hover{
+    background-color:var(--color3) !important;
+}
+
+.flex-row{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.content{
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+/* 1. TEXTO y TIPOGRAFÍAS */
+p{
+    font-family: var(--font1);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 10px 0 10px 0;
+}
+
+p a{
+    font-size: 1em;
+    color: var(--color1);
+    font-style: italic;
+}
+p a:hover{
+    color: var(--color3);
+}
+h1{
+    font-family: var(--font1);
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0; 
+}
+h2{
+    font-family: var(--font1);
+    font-size: 3rem;
+    font-weight: 600;
+    margin: auto 0; 
+}
+h3{
+    font-family: var(--font1);
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: auto 0;
+}
+h4{
+    font-family: var(--font1);
+    font-size: 2rem;
+    font-weight: 600;
+    margin: auto 0; 
+}
+h5{
+    font-family: var(--font1);
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: auto 0; 
+}
+
+.filete-blanco{
+    width: 15%;
+    height: 4px;
+    background-color: white;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.filete-naranja{
+    width: 15%;
+    height: 4px;
+    background-color: var(--color3);
+    border: none;
+    margin-bottom: 20px;
+}
+
+.filete-azul{
+    width: 15%;
+    height: 4px;
+    background-color: var(--color2);
+    border: none;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+/* 2. HEADER PAGE (NAV) */
+#header-page{
+    width: 100%;
+    position: relative;
+}
+
+#content-logo-menu-header-page{
+    position: absolute;
+    z-index: 1;
+    top:20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-page{
+    display: block;
+    width: 254px;
+    height: 118px;
+    text-indent: -5000px;
+    background: url("images/logo.svg") center center no-repeat;
+    background-size: contain;
+}
+
+/* navegador */
+#wrap-nav-principal-page{
+}
+
+#nav-principal-page{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+#nav-principal-page li{
+
+}
+
+.bt-nav-principal-page{
+    font-family: var(--font1);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 8px 5px;
+    margin: 0 15px;
+}
+
+#nav-principal-page li:nth-child(1) .bt-nav-principal-page{
+    border-bottom: 3px solid var(--color1);
+}
+#nav-principal-page li:nth-child(2) .bt-nav-principal-page{
+    border-bottom: 3px solid var(--color2);
+}
+#nav-principal-page li:nth-child(3) .bt-nav-principal-page{
+    border-bottom: 3px solid var(--color3);
+}
+#nav-principal-page li:nth-child(4) .bt-nav-principal-page{
+    border-bottom: 3px solid var(--color4);
+}
+
+#nav-principal-page li:nth-child(1) .bt-nav-principal-page:hover{
+    background-color: var(--color1);
+}
+#nav-principal-page li:nth-child(2) .bt-nav-principal-page:hover{
+    background-color: var(--color2);
+}
+#nav-principal-page li:nth-child(3) .bt-nav-principal-page:hover{
+    background-color: var(--color3);
+}
+#nav-principal-page li:nth-child(4) .bt-nav-principal-page:hover{
+    background-color: var(--color4);
+}
+
+#ico-show-nav-principal-page{
+    width: 35px;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* hero */
+#hero-header-page{
+    position:absolute;
+    z-index: 1;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: rgba(8,192,225,0.6);
+    color:white;
+}
+
+#wrap-bt-hero-header-page{
+    display: flex;
+    justify-content: center;
+}
+
+/* video */
+#wrap-video-header-page{
+
+}
+
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+/* 3. MENSAJE */
+.message-back-white{
+    background-color: white;
+    margin: 0 !important;
+    padding:0 !important;
+}
+
+.message-back-white h4{
+    color: var(--color2);
+} 
+
+.message-back-blue{
+    background-color: var(--color2);
+    margin: 0 !important;
+    padding:0 !important;
+}
+
+.message-back-blue h4{
+    color: white;
+} 
+
+.message-index{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.fila1-message-index{
+    width: 20%;
+    height: 4px;
+    background-color: var(--color1);
+}
+
+.fila2-message-index{
+    width: 30%;
+    height: 4px;
+    background-color: var(--color2);
+}
+
+.fila3-message-index{
+    width: 50%;
+    height: 4px;
+    background-color: var(--color4);
+}
+
+.fila4-message-index{
+    width: 100%;
+    height: 4px;
+    background-color: var(--color3);
+}
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+/* 4. OUR BENEFITS CUSTOM SOFTWARE */
+#wrap-benefits-our-custom-software{
+    background-color: var(--color2);
+    padding: 100px 0;
+    color: white;
+}
+
+#txt-benefits-our-custom-software{
+    margin: 40px 0;
+}
+
+#content-benefits-our-custom-software{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 100px 0 0 0!important;
+}
+
+.benefits-our-custom-software{
+    padding: 15px 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.benefits-our-custom-software img{
+    height: 90px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.benefits-our-custom-software h5{
+    min-height: 60px;
+}
+
+.benefits-our-custom-software:hover{
+    background-color: var(--color3);
+}
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+/* 5. OUR PROCESS CUSTOM SOFTWARE */
+#wrap-process-our-custom-software{
+    padding: 100px 0;
+}
+
+#wrap-items-process-our-custom-software{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.process-our-custom-software{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+
+.process-our-custom-software:nth-child(odd){
+    flex-flow: column;
+}
+
+.process-our-custom-software:nth-child(even){
+    flex-flow: column-reverse;
+}
+
+.process-our-custom-software:nth-child(1){
+    color:var(--color1);
+}
+.process-our-custom-software:nth-child(1) .order-process-our-custom-software{
+    background-color:var(--color1);
+}
+.process-our-custom-software:nth-child(1) .fluid-process-our-custom-software{
+    background-color:var(--color1);
+}
+
+.process-our-custom-software:nth-child(2){
+    color:var(--color2);
+}
+.process-our-custom-software:nth-child(2) .order-process-our-custom-software{
+    background-color:var(--color2);
+}
+.process-our-custom-software:nth-child(2) .fluid-process-our-custom-software{
+    background-color:var(--color2);
+}
+
+
+.process-our-custom-software:nth-child(3){
+    color:var(--color3);
+}
+.process-our-custom-software:nth-child(3) .order-process-our-custom-software{
+    background-color:var(--color3);
+}
+.process-our-custom-software:nth-child(3) .fluid-process-our-custom-software{
+    background-color:var(--color3);
+}
+
+
+.process-our-custom-software:nth-child(4){
+    color:var(--color4);
+}
+.process-our-custom-software:nth-child(4) .order-process-our-custom-software{
+    background-color:var(--color4);
+}
+.process-our-custom-software:nth-child(4) .fluid-process-our-custom-software{
+    background-color:var(--color4);
+}
+
+
+
+.info-process-our-custom-software{
+    height: 280px;
+}
+.info-process-our-custom-software h5{
+    margin: 15px 0;
+    padding: 0 10px;
+}
+
+.order-process-our-custom-software{
+    width: 100%;
+    font-weight: 600;
+    color: white;
+    padding: 8px 0;
+}
+
+.fluid-process-our-custom-software{
+    width: 4px;
+    height: 205px;
+}
+
+.ico-process-our-custom-software{
+    width: 75px;
+}
+.order-info-process-our-custom-software-movil{
+    display: none;
+}
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* 6. SPECIFIC SOLUTIONS */
+#wrap-specific-solutions{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: flex-end;
+    background-color: var(--color5);
+}
+
+#info-specific-solutions{
+    flex:3;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    padding: 70px 10px 10px 0;
+}
+#content-header-info-specific-solutions{
+    width: 60%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.item-specific-solutions{
+    margin: 20px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+.item-specific-solutions:nth-child(2) .content-info-item-specific-solutions{
+    border-bottom: 1px solid var(--color2);
+}
+
+.content-info-item-specific-solutions{
+    width: 60%;
+    padding: 50px 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color:var(--color2);
+    text-align: center;
+}
+.ico-info-item-specific-solutions{
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.ico-info-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.ico-info-2{
+    position: absolute;
+    top: 120px;
+    left: 0;
+
+}
+
+#img-specific-solutions{
+    flex:2;
+    position: relative;
+}
+#img-specific-solutions img{
+    height: 100%;
+    width: auto;
+    position: absolute;
+}
+
+.item-specific-solutions:hover{
+    background-color: var(--color3);
+    color: white;
+}
+
+.item-specific-solutions:hover p{
+    color: white;
+}
+
+.item-specific-solutions:hover .ico-info-1{
+    top:-120px;
+}
+
+.item-specific-solutions:hover .ico-info-2{
+    top:0;
+}
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+/* 7. TELL US - FORM */
+#wrap-tell-us{
+    background: url("images/back-form.jpg") center 0 no-repeat fixed;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+#form-tell-us{
+    margin: 50px 0;
+    width: 100%;
+    padding: 50px 20px;
+    background-color: var(--color2);
+    color: white;
+}
+
+.wrap-columns-form-tell-us{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.wrap-columns-form-tell-us > *{
+    width: 45%;
+    margin: 0 2.5%;
+}
+
+.field-form-contact{
+    font-size: 1.2rem;
+    color: white;
+    background-color: none;
+    background: none;
+    border:1px solid white;
+    width: 100%;
+    height: 35px;
+    padding: 0 5px;
+    margin: 0 0 30px 0;
+}
+
+.area-form-contact{
+    font-family: var(--font1);
+    font-size: 1.2rem;
+    color: white;
+    background-color: none;
+    background: none;
+    border:1px solid white;
+    width: 100%;
+    height: 250px;
+    padding: 0 5px;
+    margin: 0 0 30px 0;
+}
+
+#label-file-form-contact{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    margin: 20px 0;
+}
+
+#label-file-form-contact img{
+    width: 30px;
+    margin-right: 15px;
+}
+
+.check-form-contact{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.check-form-contact > *{
+    margin: 0 5px;
+}
+
+#content-captcha{
+    margin: 25px 0;
+}
+
+#content-btn-form-contact{
+    margin: 25px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* 7. FOOTER */
+#footer-page{
+
+}
+
+#wrap-logo-footer-page{
+    background-color: var(--color5);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+#logo-footer-page{
+    display: block;
+    width: 159px;
+    height: 142px;
+    text-indent: -5000px;
+    background: url("images/logo-footer.svg") center center no-repeat;
+    background-size: contain;
+}
+
+#wrap-base-footer-page{
+    
+}
+
+#content-enlaces-footer-page{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px auto;
+}
+#menu-footer-page{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.bt-footer-page{
+    color: var(--color1);
+    padding: 6px 3px;
+    border-bottom: 2px solid var(--color1);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.bt-footer-page:hover{
+    color: var(--color3);
+    border-bottom: 2px solid var(--color3);
+}
+
+#menu-RRSS-footer-page{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.bt-RRSS-footer-page{
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ico-rrsss-footer-1{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.ico-rrsss-footer-2{
+    position: absolute;
+    top:30px;
+    left: 0;
+}
+
+.bt-RRSS-footer-page:hover .ico-rrsss-footer-1{
+    top:-40px;
+}
+
+.bt-RRSS-footer-page:hover .ico-rrsss-footer-2{
+    top:0;
+}
+
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+@media (max-width: 1060px) {
+    /* 0. ESTILOS BASE */
+    body, html{
+        font-size: 12px;
+    }
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* 2. HEADER PAGE (NAV) */
+    /* hero */
+    #hero-header-page{
+        top: 60%;
+    }
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* 6. SPECIFIC SOLUTIONS */
+
+    #content-header-info-specific-solutions{
+        width: 80%;
+    }
+
+    .content-info-item-specific-solutions{
+        width: 80%;
+    }
+  
+}
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+
+@media (max-width: 900px) {
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+
+    /* 4. OUR BENEFITS CUSTOM SOFTWARE */
+    #content-benefits-our-custom-software{
+        flex-flow: row wrap;
+    }
+
+    .benefits-our-custom-software{
+        width: 50%;
+        margin: 25px 0;
+    }
+}
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+
+@media (max-width: 950px) {
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* 2. HEADER PAGE (NAV) */
+    #content-logo-menu-header-page{
+        position: relative;
+        background-color: black;
+    }
+    #logo-page{
+        width: 200px;
+        height: 93px;
+    }
+    #content-logo-menu-header-page{
+        top:0;
+    }
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* 6. SPECIFIC SOLUTIONS */
+
+    #info-specific-solutions{
+        flex:1;
+        padding: 40px 10px 10px 10px;
+    }
+    #content-header-info-specific-solutions{
+        width: 100%;
+    }
+    .content-info-item-specific-solutions{
+        width: 100%;
+    }
+
+    #img-specific-solutions{
+        flex:1;
+    }
+}
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+
+@media (max-width: 850px) {
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* 1. TEXTO y TIPOGRAFÍAS */
+
+    h1{
+        font-size: 3.4rem;
+    }
+    h2{
+        font-size: 2.6rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    h4{
+        font-size:1.6rem;
+    }
+    h5{
+        font-size: 1.3rem;
+    }
+
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+
+    /* 4. OUR BENEFITS CUSTOM SOFTWARE */
+    .benefits-our-custom-software h5{
+        min-height: 40px;
+    }
+
+}
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+@media (max-width: 770px) {
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+
+    /* 2. HEADER PAGE (NAV) */
+    #hero-header-page{
+        left: 10px;
+        top:auto;
+        bottom: 30px;
+        transform: none;
+        background: none;
+    }
+    #hero-header-page p{
+        display: none;
+    }
+    #wrap-bt-hero-header-page{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+}
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+@media (max-width: 700px) {
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* 6. SPECIFIC SOLUTIONS */
+
+    #info-specific-solutions{
+        flex:1;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .item-specific-solutions{
+        width: 50%;
+        padding: 0 10px;
+    }
+    
+    .item-specific-solutions:nth-child(2) .content-info-item-specific-solutions{
+        border-bottom: none;
+    }
+
+
+    #img-specific-solutions{
+        display: none;
+    }
+}
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+@media (max-width: 650px) {
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+
+    /* 2. HEADER PAGE (NAV) */
+    #content-logo-menu-header-page{ 
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /* navegador */
+    #wrap-nav-principal-page{
+        margin: 20px 0;
+    }
+
+    /* 3. MENSAJE */
+    .message-index{
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .message-index h4{
+        text-align: center;
+    }
+
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+
+    /* 5. OUR PROCESS CUSTOM SOFTWARE */
+    #wrap-process-our-custom-software{
+        padding: 100px 0;
+    }
+
+    #wrap-items-process-our-custom-software{
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0 0 30px 0;
+    }
+
+    .process-our-custom-software{
+        display: flex;
+        align-items: stretch;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .process-our-custom-software:nth-child(odd){
+        flex-flow: row nowrap;
+    }
+
+    .process-our-custom-software:nth-child(even){
+        flex-flow: row nowrap;
+    }
+
+
+    .info-process-our-custom-software{
+        height: auto;
+    }
+    .info-process-our-custom-software h5{
+        margin: 10px 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .info-process-our-custom-software p{
+        text-align: left;
+    }
+
+    .order-process-our-custom-software{
+        display: none;
+    }
+
+    .fluid-process-our-custom-software{
+        display: none;
+    }
+
+    .ico-process-our-custom-software{
+        display: none;
+    }
+
+    .order-info-process-our-custom-software-movil{
+        display: flex;
+        flex-flow: column;
+        align-items: stretch;
+        margin: 0 15px 0 0;
+        color: 1;
+        font-weight: 600;
+    }
+
+    .order-info-process-our-custom-software-movil{
+        display: flex;
+        flex-flow: column;
+        align-items: stretch;
+        margin: 0 15px 0 0;
+        padding: 10px 5px;
+        color: white;
+        font-weight: 600;
+        width: 200px;
+    }
+
+    .order-info-process-our-custom-software-movil img{
+        width: 60px;
+    }
+    .order-info-process-our-custom-software-movil span{
+        color: white;
+        font-size: 2rem;
+    }
+
+    .process-our-custom-software:nth-child(1) .order-info-process-our-custom-software-movil{
+        background-color: var(--color1);
+    }
+
+    .process-our-custom-software:nth-child(2) .order-info-process-our-custom-software-movil{
+        background-color: var(--color2);
+    }
+
+    .process-our-custom-software:nth-child(3) .order-info-process-our-custom-software-movil{
+        background-color: var(--color3);
+    }
+
+    .process-our-custom-software:nth-child(4) .order-info-process-our-custom-software-movil{
+        background-color: var(--color4);
+    }
+}
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+@media (max-width: 550px) {
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+
+    /* 2. HEADER PAGE (NAV) */
+    /* hero */
+    #hero-header-page{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #hero-header-page hr{
+        display: none;
+    }
+
+    #hero-header-page h1{
+        text-align: center;
+        font-size: 2rem !important;
+    }
+
+
+    /* 7. TELL US - FORM */
+    #wrap-tell-us{
+        background: none;
+        background-color: white;
+        padding: 70px 0;
+    }
+
+    .wrap-columns-form-tell-us{
+        flex-flow: column;
+    }
+
+    .wrap-columns-form-tell-us > *{
+        width: 95%;
+        margin: 0 2.5%;
+    }
+
+}
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+@media (max-width: 500px) {
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+
+    /* 4. OUR BENEFITS CUSTOM SOFTWARE */
+    
+
+    #content-benefits-our-custom-software{
+        flex-flow: column;
+        margin: 50px 0 0 0!important;
+    }
+
+    .benefits-our-custom-software{
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .benefits-our-custom-software img{
+        height: 60px;
+        width: auto;
+        margin: 0 20px 0 0;
+    }
+
+    .benefits-our-custom-software h5{
+        min-height: auto;
+    }
+
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* 6. SPECIFIC SOLUTIONS */
+
+    .item-specific-solutions{
+        width: 100%;
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* ------------------------------------------------- */
+    /* 7. FOOTER */
+    #content-enlaces-footer-page{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin: 15px auto;
+    }
+
+}
+
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+@media (max-width: 420px) {
+
+    /* navegador */
+    #wrap-nav-principal-page{
+        width: 100%;
+        margin: 0;
+    }
+
+    #nav-principal-page{
+        display: none;
+        flex-flow: column;
+        justify-content: flex-start;
+    }
+
+    #nav-principal-page li{
+        width: 100%;
+    }
+
+    .bt-nav-principal-page{
+        width: 100%;
+        font-size: 1.3rem;
+        padding: 15px 0;
+        margin: 0;
+        text-align: center;
+    }
+
+
+    #ico-show-nav-principal-page{
+        width: 35px;
+        position: absolute;
+        cursor: pointer;
+        display: block;
+        top:10px;
+        right: 10px;
+    }
+
+    #check-show-nav-principal-page:checked + #nav-principal-page{
+        display: flex;
+    }
+
+}
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
