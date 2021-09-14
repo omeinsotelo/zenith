@@ -36,7 +36,7 @@ Version:
     --color1:#004F9F;
     --color2:#08C0E1;
     --color3:#FF5C00;
-    --color4:#FECA00;
+    --color4:#f8aa00;
     --color5:#E5E5E5;
     --font1:'Montserrat', sans-serif;
 }
@@ -49,6 +49,7 @@ body, html{
     background:white;
     font-size: 14px;
     font-family: var(--font1);
+    scroll-behavior: smooth;
 }
 
 .color1{
@@ -192,31 +193,36 @@ h1{
     font-size: 4rem;
     font-weight: 600;
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 h2{
     font-family: var(--font1);
     font-size: 3rem;
     font-weight: 600;
-    margin: auto 0; 
+    margin: auto 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 h3{
     font-family: var(--font1);
     font-size: 2.4rem;
     font-weight: 600;
     margin: auto 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 h4{
     font-family: var(--font1);
     font-size: 2rem;
     font-weight: 600;
-    margin: auto 0; 
+    margin: auto 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 h5{
     font-family: var(--font1);
     font-size: 1.7rem;
     font-weight: 600;
     margin: auto 0; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .filete-blanco{
@@ -254,23 +260,32 @@ h5{
 }
 
 #content-logo-menu-header-page{
-    position: absolute;
-    z-index: 1;
-    top:20px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: fixed;
+    z-index: 1000;
+    top:0;
+    left: 0;
     width: 100%;
-    max-width: 1000px;
+}
+
+#logo-menu-header-page{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.back-scroll-content-logo-menu-header-page{
+    background-color: rgba(0,0,0,0.7);
+    position: fixed !important;
 }
 
 #logo-page{
     display: block;
-    width: 254px;
-    height: 118px;
+    width: 322px;
+    height: 81px;
     text-indent: -5000px;
     background: url("images/logo.svg") center center no-repeat;
     background-size: contain;
@@ -763,22 +778,22 @@ h5{
 /* ------------------------------------------------- */
 /* 7. FOOTER */
 #footer-page{
-
+    background-color: black;
 }
 
 #wrap-logo-footer-page{
-    background-color: var(--color5);
     display: flex;
+    flex-flow: column;
     justify-content: center;
     padding: 15px 0;
 }
 
 #logo-footer-page{
     display: block;
-    width: 159px;
-    height: 142px;
+    width: 240px;
+    height: 60px;
     text-indent: -5000px;
-    background: url("images/logo-footer.svg") center center no-repeat;
+    background: url("images/logo.svg") center center no-repeat;
     background-size: contain;
 }
 
@@ -791,7 +806,7 @@ h5{
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    margin: 15px auto;
+    margin: 0 auto;
 }
 #menu-footer-page{
     display: flex;
@@ -802,7 +817,7 @@ h5{
 }
 
 .bt-footer-page{
-    color: var(--color1);
+    color: white;
     padding: 6px 3px;
     border-bottom: 2px solid var(--color1);
     text-decoration: none;
@@ -926,15 +941,12 @@ h5{
     /* ------------------------------------------------- */
     /* 2. HEADER PAGE (NAV) */
     #content-logo-menu-header-page{
-        position: relative;
-        background-color: black;
+        position: fixed;
+        background-color: rgba(0,0,0,0.7);
     }
     #logo-page{
         width: 200px;
         height: 93px;
-    }
-    #content-logo-menu-header-page{
-        top:0;
     }
     /* ------------------------------------------------- */
     /* ------------------------------------------------- */
@@ -1064,15 +1076,44 @@ h5{
     /* ------------------------------------------------- */
 
     /* 2. HEADER PAGE (NAV) */
-    #content-logo-menu-header-page{ 
+    #logo-menu-header-page{
         display: flex;
         flex-flow: column;
-        justify-content: center;
-        align-items: center;
     }
     /* navegador */
     #wrap-nav-principal-page{
-        margin: 20px 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    #nav-principal-page { display: none;flex-flow: column; justify-content: flex-start; }
+
+    #nav-principal-page li{
+        width: 100%;
+    }
+
+    .bt-nav-principal-page{
+        width: 100%;
+        font-size: 1.3rem;
+        padding: 15px 0;
+        margin: 0;
+        text-align: center;
+    }
+
+
+    #ico-show-nav-principal-page{
+        width: 35px;
+        position: absolute;
+        cursor: pointer;
+        display: block;
+        top:10px;
+        right: 10px;
+    }
+
+    #check-show-nav-principal-page:checked + #nav-principal-page{
+        display: flex;
+        background-color: black;
+        height: 100vh;
     }
 
     /* 3. MENSAJE */
@@ -1297,6 +1338,35 @@ h5{
         margin: 15px auto;
     }
 
+    .bt-footer-page{
+        margin: 0 5px;
+    }
+
+}
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+/* ------------------------------------------------- */
+
+@media (max-width: 450px) {
+    /* 2. HEADER PAGE (NAV) */
+    /* hero */
+    #hero-header-page{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #hero-header-page hr{
+        display: none;
+    }
+
+    #hero-header-page h1{
+        display: none;
+    }
 }
 
 /* ------------------------------------------------- */
@@ -1311,11 +1381,7 @@ h5{
         margin: 0;
     }
 
-    #nav-principal-page{
-        display: none;
-        flex-flow: column;
-        justify-content: flex-start;
-    }
+    #nav-principal-page { display: none;flex-flow: column; justify-content: flex-start; }
 
     #nav-principal-page li{
         width: 100%;
